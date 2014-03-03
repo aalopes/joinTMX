@@ -1,0 +1,3 @@
+Python script for joining several Tiled TMX files into a single one.
+Useful for joining multiple maps into bigger one, based on the coordinates
+of the smaller maps.
