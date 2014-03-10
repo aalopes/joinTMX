@@ -1,3 +1,43 @@
-Python script for joining several Tiled TMX files into a single one.
-Useful for joining multiple maps into bigger one, based on the coordinates
-of the smaller maps.
+joinTMX v0.1 (10.03.2014)
+
+Copyright 2014 Alexandre Lopes <aalopes@ovi.com>
+
+-------------------------------------------------------------------------------
+= Description =
+
+ Python script for joining several Tiled .tmx files into a single one.
+ Useful for joining multiple small maps into bigger one, based on the 
+ coordinates of the smaller maps. It takes as input a file with the size of 
+ the big map as well as a list of coordinates of the the several small maps. 
+ It will take care of making sure that all tilesets are put properly into the 
+ final file even if two or more of the small maps use the same tileset but with
+ different firstgids. It is also not problematic if the small maps use different
+ sets of tilesets.
+ The original version of this script was written for The Mana World 
+ <https://www.themanaworld.org/>, such that some parts of it may still need
+ to be modified for a more general application.
+
+------------------------------------------------------------------------------- 
+= Usage =
+
+  Simply run:
+  python joinTMX inpFile.inp
+  
+  The form of the inpFile should be:
+  
+  name   "bigMapName" "width" "height"
+  offset "xOffset"  "yOffset"
+  map    "mapOneName"  "x1" "y1"
+  map    "mapTwoName"  "x2" "y2"
+  ...
+  
+  where there can be as many map lines as necessary.
+  For a sample .inp file, see the ./example folder.
+ 
+-------------------------------------------------------------------------------
+ = Licensing =
+
+All the code is licensed under the GPLv license.
+The tilesets and maps in the /example folder are part of The Mana World
+<https://www.themanaworld.org/> and are copyright of the The Mana World 
+development team and released under the GPLv2 and CC-BY-SA3 licenses.
