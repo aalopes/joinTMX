@@ -18,7 +18,7 @@
 
  This particular file is not part of any other program, although a
  version of it has been released as part of The Mana World
- under GPL2
+ under GPLv2
  
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
